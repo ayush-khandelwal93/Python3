@@ -1,3 +1,0 @@
-{
-  "https://api.flickr.com/services/rest/format-json_media-photos_method-flickr.photos.search_nojsoncallback-1_per_page-5_tag_mode-all_tags-river,mountains": "{\"stat\":\"fail\",\"code\":100,\"message\":\"Invalid API Key (Key has invalid format)\"}"
-}
