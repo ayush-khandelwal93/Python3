@@ -1,0 +1,21 @@
+some problem with requests_with_caching.py code when it tries to use a prebuilt ""Permanent cache from flickr_cache.txt""
+
+error is:-File "flickr_api.py", line 21, in get_flickr_data
+    flickr_resp = requests_with_caching.get(baseurl, params = params_diction, permanent_cache_file="flickr_cache.txt")
+  File "/home/ayush/Downloads/Python3/API/requests_with_caching.py", line 47, in get
+    return requests.Response(temp_cache[cache_key], full_url)
+TypeError: __init__() takes 1 positional argument but 3 were given
+
+We can hence opt not to use cache and directly use the requests.get()
+but we dont have an api key id so it fails as the content is not fetched with error 
+{'stat': 'fail', 'code': 100, 'message': 'Invalid API Key (Key has invalid format)'}
+Traceback (most recent call last):
+  File "flickr_api.py", line 30, in <module>
+    photos = result_river_mts['photos']['photo']
+KeyError: 'photos'
+
+A new cache file is also generated as this_page_cache.txt so that the get requests can be stored here. But it also shows that the requests had failed without at API key and hence nothing is in the cache.
+
+
+Permanent Cache=flickr_cache.txt
+Temporary Caceh=this_page_cache.txt
