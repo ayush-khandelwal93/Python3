@@ -7,6 +7,9 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 
+STARTING_BLUE_BLOBS = 10
+STARTING_RED_BLOBS = 3
+
 game_display = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption('Blob World')
 clock = pygame.time.Clock()
@@ -32,21 +35,23 @@ class Blob:
         elif self.y > HEIGHT: self.y = HEIGHT
 
 
-def draw_environment(blob):
+def draw_environment(blobs):
     game_display.fill(WHITE)
-    pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
+    for blob in blobs:
+        pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
+        blob.move()
     pygame.display.update()
-    blob.move()
 
 def main():
-    red_blob=Blob(RED)
+    #red_blob=Blob(RED)
+    blue_blobs=[Blob(BLUE) for i in range(STARTING_BLUE_BLOBS)]
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
 
-        draw_environment(red_blob)
+        draw_environment(blue_blobs)
         clock.tick(60)
 
 if __name__=='__main__':
