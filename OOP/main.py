@@ -21,6 +21,10 @@ class BlueBlob(Blob):
         super().__init__(color,x_boundary,y_boundary)
         self.color=BLUE
         
+    
+    def move_fast(self):
+        self.x += random.randrange(-5,5)
+        self.y += random.randrange(-5,5)
 
 def draw_environment(blob_list):
     game_display.fill(WHITE)
@@ -28,7 +32,8 @@ def draw_environment(blob_list):
         for blob_id in blob_dict:
             blob=blob_dict[blob_id]
             pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
-            blob.move()
+            blob.move_fast()
+            blob.check_bounds()
     pygame.display.update()
 
 def main():
