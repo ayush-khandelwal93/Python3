@@ -32,18 +32,20 @@ class Blob:
         elif self.y > HEIGHT: self.y = HEIGHT
 
 
-def draw_environment():
+def draw_environment(blob):
     game_display.fill(WHITE)
+    pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
     pygame.display.update()
 
 def main():
+    red_blob=Blob(RED)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
 
-        draw_environment()
+        draw_environment(red_blob)
         clock.tick(60)
 
 if __name__=='__main__':
