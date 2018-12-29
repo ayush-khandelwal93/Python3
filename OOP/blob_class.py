@@ -16,6 +16,8 @@ class Blob:
         self.x += self.move_x
         self.y += self.move_y
 
+    def check_bounds(self):
+
         if self.x < 0: self.x = 0
         elif self.x > self.x_boundary: self.x = self.x_boundary
         
