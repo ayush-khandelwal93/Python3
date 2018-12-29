@@ -16,7 +16,9 @@ pygame.display.set_caption('Blob World')
 clock = pygame.time.Clock()
 
 class BlueBlob(Blob):
-    pass
+    
+    def __init__(self):
+        pass
 
 def draw_environment(blob_list):
     game_display.fill(WHITE)
