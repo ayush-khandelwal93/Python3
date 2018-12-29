@@ -19,7 +19,7 @@ class BlueBlob(Blob):
     
     def __init__(self, color, x_boundary,y_boundary):
         super().__init__(color,x_boundary,y_boundary)
-        
+        self.color=BLUE
         
 
 def draw_environment(blob_list):
