@@ -17,8 +17,10 @@ clock = pygame.time.Clock()
 
 class BlueBlob(Blob):
     
-    def __init__(self):
-        pass
+    def __init__(self, color, x_boundary,y_boundary):
+        super().__init__(color,x_boundary,y_boundary)
+        
+        
 
 def draw_environment(blob_list):
     game_display.fill(WHITE)
