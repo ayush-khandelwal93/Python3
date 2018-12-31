@@ -20,6 +20,19 @@ class BlueBlob(Blob):
     
     def __init__(self, x_boundary,y_boundary):
         super().__init__((0,0,255),x_boundary,y_boundary)
+
+    def __add__(self,other_blob):
+        if other_blob.color==(255,0,0):
+            self.size -= other_blob.size
+            other_blob.size -= self.size
+        elif other_blob.color==(0,255,0):
+            self.size+=other_blob.size
+            other_blob.size=0
+        elif other_blob.color==(0,0,255):
+            pass
+        else:
+            raise Exception('Tried to combine one or multiple blobs of unsupported colors!')
+            
         
 class RedBlob(Blob):
     def __init__(self, x_boundary,y_boundary):
@@ -43,14 +56,21 @@ def main():
     blue_blobs=dict(enumerate([BlueBlob(WIDTH,HEIGHT) for i in range(STARTING_BLUE_BLOBS)]))
     red_blobs=dict(enumerate([RedBlob(WIDTH,HEIGHT) for i in range(STARTING_RED_BLOBS)]))
     green_blobs=dict(enumerate([GreenBlob(WIDTH,HEIGHT) for i in range(STARTING_GREEN_BLOBS)]))
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                quit()
 
-        draw_environment([blue_blobs,red_blobs,green_blobs])
-        clock.tick(60)
+    print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),
+                                                               str(red_blobs[0].size)))
+
+    blue_blobs[0] + red_blobs[0]
+    print('Current blue size: {}. Current red size: {}'.format(str(blue_blobs[0].size),str(red_blobs[0].size)))
+
+    #while True:
+    #    for event in pygame.event.get():
+    #        if event.type == pygame.QUIT:
+    #            pygame.quit()
+    #            quit()
+
+    #    draw_environment([blue_blobs,red_blobs,green_blobs])
+    #    clock.tick(60)
 
 if __name__=='__main__':
     main()
