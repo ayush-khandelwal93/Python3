@@ -1,0 +1,29 @@
+1557163222322	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.i9zNNk1qZwef"
+1557163228649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557163228649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557163228649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557163235012	Marionette	INFO	Listening on port 39499
+1557163235073	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://kanview.ks.gov/ScriptResource.axd?d=Ni-W7WO0LIKGZJvrOsdLvClv_hGgG2mQ7vkPTrsSxnv30frD5vbyUWL5nl5IX6eITHfLZ5Dw9ksGYTxOoOV2abDnlRnwWF6kxRU9tj7JnNBe9j1_FQ6yD6INSvpOldBY1SmDv6cxiX1sIHRcRRlex_aSHWDZ0h_5UbG0UlPLP56aJSfm0&t=2b48f70a, line 10: ReferenceError: Type is not defined
+JavaScript error: http://kanview.ks.gov/PayRates/PayRates_Agency.aspx, line 76: TypeError: Sys.WebForms.PageRequestManager is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+1557166645143	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QdfsdIDOpxJB"
+1557166646171	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557166646172	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557166646172	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557166649098	Marionette	INFO	Listening on port 33295
+1557166649197	Marionette	WARN	TLS certificate errors will be ignored for this session
+1557166655622	Marionette	INFO	Stopped listening on port 39499
+1557166972513	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.q93mDOccI4dd"
+1557166972960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1557166972960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1557166972960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1557166976099	Marionette	INFO	Listening on port 34111
+1557166976163	Marionette	WARN	TLS certificate errors will be ignored for this session
