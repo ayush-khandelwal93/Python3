@@ -12,6 +12,8 @@ ctx.verify_mode = ssl.CERT_NONE
 conn = sqlite3.connect('spyder.sqlite')
 cur = conn.cursor()
 cur.execute('DROP TABLE IF EXISTS Pages')
+cur.execute('DROP TABLE IF EXISTS Links')
+cur.execute('DROP TABLE IF EXISTS webs')
 cur.execute('CREATE TABLE IF NOT EXISTS Pages\
     (id INTEGER PRIMARY KEY, url TEXT UNIQUE, html TEXT,\
      error INTEGER, old_rank REAL, new_rank REAL)')
