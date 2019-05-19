@@ -1,0 +1,14 @@
+root - WARNING - This will get logged to a file
+root - WARNING - This will get logged to a file
+root - WARNING - This will get logged to a file
+root - ERROR - John raised an error
+root - WARNING - This will get logged to a file
+root - ERROR - John raised an error
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "basic4.py", line 15, in <module>
+    c = a / b
+ZeroDivisionError: division by zero
+root - WARNING - This will get logged to a file
+root - ERROR - John raised an error
+root - ERROR - Exception occurred
