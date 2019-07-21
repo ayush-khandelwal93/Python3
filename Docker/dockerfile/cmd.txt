@@ -1,0 +1,9 @@
+First build the dockerfile using
+->docker build . -t new_docker_image
+
+Then new docker image will be made
+Then run docker image
+-> docker run -it -p 84:80 new_docker_image
+
+Go to localhost port 84,see apache running
+Then go to /1.html to see the web page
